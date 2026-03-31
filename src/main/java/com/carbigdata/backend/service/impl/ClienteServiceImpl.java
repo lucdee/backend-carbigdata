@@ -4,7 +4,7 @@ import com.carbigdata.backend.dto.response.ClienteResponseDto;
 import com.carbigdata.backend.entity.Cliente;
 import com.carbigdata.backend.exception.NotFoundException;
 import com.carbigdata.backend.mapper.ClienteMapper;
-import com.carbigdata.backend.reposdory.ClienteRepository;
+import com.carbigdata.backend.repository.ClienteRepository;
 import com.carbigdata.backend.service.ClienteService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
