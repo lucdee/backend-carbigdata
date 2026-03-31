@@ -1,5 +1,6 @@
 package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.dto.request.EnderecoRequestDto;
 import com.carbigdata.backend.dto.response.EnderecoResponseDto;
 import com.carbigdata.backend.service.EnderecoService;
 import jakarta.validation.Valid;
@@ -27,7 +28,7 @@ public class EnderecoController {
     }
 
     @PostMapping
-    public EnderecoResponseDto create(@RequestBody @Valid EnderecoResponseDto dto) {
-        return service.create(dto);
+    public EnderecoResponseDto create(@RequestBody @Valid EnderecoRequestDto request) {
+        return service.create(request);
     }
 }
