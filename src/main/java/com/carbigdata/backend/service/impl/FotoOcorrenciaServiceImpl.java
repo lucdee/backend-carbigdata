@@ -1,10 +1,13 @@
-package com.carbigdata.backend.domain.foto;
+package com.carbigdata.backend.service.impl;
 
-import com.carbigdata.backend.domain.common.NotFoundException;
-import com.carbigdata.backend.domain.ocorrencia.OcorrenciaRepository;
+import com.carbigdata.backend.dto.response.FotoOcorrenciaResponseDto;
 import com.carbigdata.backend.entity.FotoOcorrencia;
 import com.carbigdata.backend.entity.Ocorrencia;
+import com.carbigdata.backend.exception.NotFoundException;
 import com.carbigdata.backend.mapper.OcorrenciaMapper;
+import com.carbigdata.backend.reposdory.FotoOcorrenciaRepository;
+import com.carbigdata.backend.reposdory.OcorrenciaRepository;
+import com.carbigdata.backend.service.FotoOcorrenciaService;
 import com.carbigdata.backend.storage.ObjectStoragePort;
 import java.io.IOException;
 import java.time.Instant;
@@ -14,24 +17,26 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-public class FotoOcorrenciaService {
+public class FotoOcorrenciaServiceImpl implements FotoOcorrenciaService {
     private final FotoOcorrenciaRepository repository;
     private final OcorrenciaRepository ocorrenciaRepository;
     private final OcorrenciaMapper mapper;
     private final ObjectStoragePort storage;
 
-    public FotoOcorrenciaService(FotoOcorrenciaRepository repository, OcorrenciaRepository ocorrenciaRepository, OcorrenciaMapper mapper, ObjectStoragePort storage) {
+    public FotoOcorrenciaServiceImpl(FotoOcorrenciaRepository repository, OcorrenciaRepository ocorrenciaRepository, OcorrenciaMapper mapper, ObjectStoragePort storage) {
         this.repository = repository;
         this.ocorrenciaRepository = ocorrenciaRepository;
         this.mapper = mapper;
         this.storage = storage;
     }
 
-    public Page<FotoOcorrenciaDto> listByOcorrencia(Long ocorrenciaId, Pageable pageable) {
+    @Override
+    public Page<FotoOcorrenciaResponseDto> listByOcorrencia(Long ocorrenciaId, Pageable pageable) {
         return repository.findByOcorrenciaId(ocorrenciaId, pageable).map(mapper::toDto);
     }
 
-    public FotoOcorrenciaDto upload(Long ocorrenciaId, MultipartFile file) {
+    @Override
+    public FotoOcorrenciaResponseDto upload(Long ocorrenciaId, MultipartFile file) {
         Ocorrencia ocorrencia = ocorrenciaRepository.findById(ocorrenciaId)
                 .orElseThrow(() -> new NotFoundException("Ocorrência não encontrada"));
 

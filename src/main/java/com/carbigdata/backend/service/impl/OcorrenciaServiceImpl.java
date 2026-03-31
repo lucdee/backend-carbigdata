@@ -1,39 +1,46 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.service.impl;
 
+import com.carbigdata.backend.dto.request.OcorrenciaRequestDto;
+import com.carbigdata.backend.dto.response.OcorrenciaResponseDto;
 import com.carbigdata.backend.entity.Cliente;
-import com.carbigdata.backend.domain.cliente.ClienteRepository;
-import com.carbigdata.backend.domain.common.NotFoundException;
 import com.carbigdata.backend.entity.Endereco;
-import com.carbigdata.backend.domain.endereco.EnderecoRepository;
 import com.carbigdata.backend.entity.Ocorrencia;
+import com.carbigdata.backend.exception.NotFoundException;
 import com.carbigdata.backend.mapper.OcorrenciaMapper;
+import com.carbigdata.backend.reposdory.ClienteRepository;
+import com.carbigdata.backend.reposdory.EnderecoRepository;
+import com.carbigdata.backend.reposdory.OcorrenciaRepository;
+import com.carbigdata.backend.service.OcorrenciaService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OcorrenciaService {
+public class OcorrenciaServiceImpl implements OcorrenciaService {
     private final OcorrenciaRepository repository;
     private final ClienteRepository clienteRepository;
     private final EnderecoRepository enderecoRepository;
     private final OcorrenciaMapper mapper;
 
-    public OcorrenciaService(OcorrenciaRepository repository, ClienteRepository clienteRepository, EnderecoRepository enderecoRepository, OcorrenciaMapper mapper) {
+    public OcorrenciaServiceImpl(OcorrenciaRepository repository, ClienteRepository clienteRepository, EnderecoRepository enderecoRepository, OcorrenciaMapper mapper) {
         this.repository = repository;
         this.clienteRepository = clienteRepository;
         this.enderecoRepository = enderecoRepository;
         this.mapper = mapper;
     }
 
-    public Page<OcorrenciaDto> list(Pageable pageable) {
+    @Override
+    public Page<OcorrenciaResponseDto> list(Pageable pageable) {
         return repository.findAll(pageable).map(mapper::toDto);
     }
 
-    public OcorrenciaDto find(Long id) {
+    @Override
+    public OcorrenciaResponseDto find(Long id) {
         return mapper.toDto(repository.findById(id).orElseThrow(() -> new NotFoundException("Ocorrência não encontrada")));
     }
 
-    public OcorrenciaDto create(OcorrenciaRequest request) {
+    @Override
+    public OcorrenciaResponseDto create(OcorrenciaRequestDto request) {
         Cliente cliente = clienteRepository.findById(request.clienteId()).orElseThrow(() -> new NotFoundException("Cliente não encontrado"));
         Endereco endereco = enderecoRepository.findById(request.enderecoId()).orElseThrow(() -> new NotFoundException("Endereço não encontrado"));
         Ocorrencia ocorrencia = new Ocorrencia();

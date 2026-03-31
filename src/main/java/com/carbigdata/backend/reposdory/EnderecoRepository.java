@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.endereco;
+package com.carbigdata.backend.reposdory;
 
 import com.carbigdata.backend.entity.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;

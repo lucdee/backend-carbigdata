@@ -1,7 +1,8 @@
 package com.carbigdata.backend.controller;
 
 import com.carbigdata.backend.auth.JwtService;
-import jakarta.validation.constraints.NotBlank;
+import com.carbigdata.backend.dto.request.AuthRequestDto;
+import com.carbigdata.backend.dto.response.AuthResponseDto;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,14 +21,11 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public AuthResponse login(@RequestBody AuthRequest request) {
+    public AuthResponseDto login(@RequestBody AuthRequestDto request) {
         Authentication auth = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.username(), request.password())
         );
         String token = jwtService.generate((UserDetails) auth.getPrincipal());
-        return new AuthResponse(token, 1800);
+        return new AuthResponseDto(token, 1800);
     }
-
-    public record AuthRequest(@NotBlank String username, @NotBlank String password) {}
-    public record AuthResponse(String token, long expiresInSeconds) {}
 }

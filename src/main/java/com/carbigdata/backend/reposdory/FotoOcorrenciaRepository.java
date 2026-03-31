@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.foto;
+package com.carbigdata.backend.reposdory;
 
 import com.carbigdata.backend.entity.FotoOcorrencia;
 import org.springframework.data.domain.Page;
