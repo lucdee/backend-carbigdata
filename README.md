@@ -2,8 +2,11 @@
 
 ## Swagger / OpenAPI
 
-- **Swagger UI**: `http://localhost:8080/swagger-ui/index.html`
-- **OpenAPI JSON**: `http://localhost:8080/v3/api-docs`
+> **Atenção:** o backend está configurado para rodar na **porta 9090** (`server.port=9090`).
+
+- **Backend (base URL)**: `http://localhost:9090`
+- **Swagger UI**: `http://localhost:9090/swagger-ui/index.html`
+- **OpenAPI JSON**: `http://localhost:9090/v3/api-docs`
 
 Backend REST do projeto **CARBIGDATA**, construído com Spring Boot para gerenciamento de clientes, endereços, ocorrências e fotos de ocorrência.
 
