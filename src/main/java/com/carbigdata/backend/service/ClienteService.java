@@ -1,5 +1,6 @@
 package com.carbigdata.backend.service;
 
+import com.carbigdata.backend.dto.request.ClienteRequestDto;
 import com.carbigdata.backend.dto.response.ClienteResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,5 +10,5 @@ public interface ClienteService {
 
     ClienteResponseDto find(Long id);
 
-    ClienteResponseDto create(ClienteResponseDto dto);
+    ClienteResponseDto create(ClienteRequestDto request);
 }

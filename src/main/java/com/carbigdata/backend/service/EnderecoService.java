@@ -1,5 +1,6 @@
 package com.carbigdata.backend.service;
 
+import com.carbigdata.backend.dto.request.EnderecoRequestDto;
 import com.carbigdata.backend.dto.response.EnderecoResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,5 +10,5 @@ public interface EnderecoService {
 
     EnderecoResponseDto find(Long id);
 
-    EnderecoResponseDto create(EnderecoResponseDto dto);
+    EnderecoResponseDto create(EnderecoRequestDto request);
 }

@@ -1,5 +1,6 @@
 package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.dto.request.ClienteRequestDto;
 import com.carbigdata.backend.dto.response.ClienteResponseDto;
 import com.carbigdata.backend.service.ClienteService;
 import jakarta.validation.Valid;
@@ -27,7 +28,7 @@ public class ClienteController {
     }
 
     @PostMapping
-    public ClienteResponseDto create(@RequestBody @Valid ClienteResponseDto dto) {
-        return service.create(dto);
+    public ClienteResponseDto create(@RequestBody @Valid ClienteRequestDto request) {
+        return service.create(request);
     }
 }
