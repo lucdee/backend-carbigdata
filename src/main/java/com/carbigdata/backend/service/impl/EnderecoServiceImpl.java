@@ -4,7 +4,7 @@ import com.carbigdata.backend.dto.response.EnderecoResponseDto;
 import com.carbigdata.backend.entity.Endereco;
 import com.carbigdata.backend.exception.NotFoundException;
 import com.carbigdata.backend.mapper.EnderecoMapper;
-import com.carbigdata.backend.reposdory.EnderecoRepository;
+import com.carbigdata.backend.repository.EnderecoRepository;
 import com.carbigdata.backend.service.EnderecoService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

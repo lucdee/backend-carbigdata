@@ -8,5 +8,5 @@ import org.springframework.web.multipart.MultipartFile;
 public interface FotoOcorrenciaService {
     Page<FotoOcorrenciaResponseDto> listByOcorrencia(Long ocorrenciaId, Pageable pageable);
 
-    FotoOcorrenciaResponseDto upload(Long ocorrenciaId, MultipartFile file);
+  /*  FotoOcorrenciaResponseDto upload(Long ocorrenciaId, MultipartFile file);*/
 }

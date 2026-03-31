@@ -1,3 +1,4 @@
+/*
 package com.carbigdata.backend.storage;
 
 import java.io.InputStream;
@@ -7,3 +8,4 @@ public interface ObjectStoragePort {
 
     record StoredObject(String path, String hash) {}
 }
+*/

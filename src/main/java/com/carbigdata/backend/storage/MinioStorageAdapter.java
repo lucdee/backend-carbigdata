@@ -1,3 +1,4 @@
+/*
 package com.carbigdata.backend.storage;
 
 import io.minio.*;
@@ -47,3 +48,4 @@ public class MinioStorageAdapter implements ObjectStoragePort {
         }
     }
 }
+*/
