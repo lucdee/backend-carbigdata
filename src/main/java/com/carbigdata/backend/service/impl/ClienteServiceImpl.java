@@ -1,5 +1,6 @@
 package com.carbigdata.backend.service.impl;
 
+import com.carbigdata.backend.dto.request.ClienteRequestDto;
 import com.carbigdata.backend.dto.response.ClienteResponseDto;
 import com.carbigdata.backend.entity.Cliente;
 import com.carbigdata.backend.exception.NotFoundException;
@@ -31,7 +32,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public ClienteResponseDto create(ClienteResponseDto dto) {
+    public ClienteResponseDto create(ClienteRequestDto dto) {
         Cliente cliente = mapper.toEntity(dto);
         cliente.setId(null);
         return mapper.toDto(repository.save(cliente));
