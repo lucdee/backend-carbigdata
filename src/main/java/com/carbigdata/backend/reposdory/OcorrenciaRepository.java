@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.reposdory;
 
 import com.carbigdata.backend.entity.Ocorrencia;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.common;
+package com.carbigdata.backend.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;

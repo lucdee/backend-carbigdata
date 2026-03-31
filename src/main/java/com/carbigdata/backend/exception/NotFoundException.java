@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.common;
+package com.carbigdata.backend.exception;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {

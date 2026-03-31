@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.user;
+package com.carbigdata.backend.reposdory;
 
 import com.carbigdata.backend.entity.AppUser;
 import java.util.Optional;

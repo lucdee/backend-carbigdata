@@ -1,7 +1,7 @@
 package com.carbigdata.backend.config;
 
 import com.carbigdata.backend.auth.JwtAuthenticationFilter;
-import com.carbigdata.backend.domain.user.AppUserRepository;
+import com.carbigdata.backend.reposdory.AppUserRepository;
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

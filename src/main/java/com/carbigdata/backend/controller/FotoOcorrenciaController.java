@@ -1,7 +1,7 @@
 package com.carbigdata.backend.controller;
 
-import com.carbigdata.backend.domain.foto.FotoOcorrenciaDto;
-import com.carbigdata.backend.domain.foto.FotoOcorrenciaService;
+import com.carbigdata.backend.dto.response.FotoOcorrenciaResponseDto;
+import com.carbigdata.backend.service.FotoOcorrenciaService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
@@ -13,15 +13,17 @@ import org.springframework.web.multipart.MultipartFile;
 public class FotoOcorrenciaController {
     private final FotoOcorrenciaService service;
 
-    public FotoOcorrenciaController(FotoOcorrenciaService service) { this.service = service; }
+    public FotoOcorrenciaController(FotoOcorrenciaService service) {
+        this.service = service;
+    }
 
     @GetMapping
-    public Page<FotoOcorrenciaDto> list(@PathVariable Long ocorrenciaId, Pageable pageable) {
+    public Page<FotoOcorrenciaResponseDto> list(@PathVariable Long ocorrenciaId, Pageable pageable) {
         return service.listByOcorrencia(ocorrenciaId, pageable);
     }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public FotoOcorrenciaDto upload(@PathVariable Long ocorrenciaId, @RequestPart("file") MultipartFile file) {
+    public FotoOcorrenciaResponseDto upload(@PathVariable Long ocorrenciaId, @RequestPart("file") MultipartFile file) {
         return service.upload(ocorrenciaId, file);
     }
 }
