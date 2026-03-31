@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.user;
+package com.carbigdata.backend.entity;
 
 import jakarta.persistence.*;
 

@@ -1,6 +1,5 @@
-package com.carbigdata.backend.domain.foto;
+package com.carbigdata.backend.entity;
 
-import com.carbigdata.backend.domain.ocorrencia.Ocorrencia;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

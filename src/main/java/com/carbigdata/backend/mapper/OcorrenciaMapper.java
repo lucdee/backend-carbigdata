@@ -1,7 +1,9 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.mapper;
 
-import com.carbigdata.backend.domain.foto.FotoOcorrencia;
+import com.carbigdata.backend.entity.FotoOcorrencia;
 import com.carbigdata.backend.domain.foto.FotoOcorrenciaDto;
+import com.carbigdata.backend.domain.ocorrencia.OcorrenciaDto;
+import com.carbigdata.backend.entity.Ocorrencia;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

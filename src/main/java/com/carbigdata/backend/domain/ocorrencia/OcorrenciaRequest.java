@@ -1,5 +1,6 @@
 package com.carbigdata.backend.domain.ocorrencia;
 
+import com.carbigdata.backend.entity.StatusOcorrencia;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 

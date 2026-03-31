@@ -1,6 +1,6 @@
 package com.carbigdata.backend.service;
 
-import com.carbigdata.backend.model.Carro;
+import com.carbigdata.backend.entity.Carro;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

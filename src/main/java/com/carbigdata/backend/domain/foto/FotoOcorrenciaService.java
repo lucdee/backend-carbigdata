@@ -1,9 +1,10 @@
 package com.carbigdata.backend.domain.foto;
 
 import com.carbigdata.backend.domain.common.NotFoundException;
-import com.carbigdata.backend.domain.ocorrencia.Ocorrencia;
-import com.carbigdata.backend.domain.ocorrencia.OcorrenciaMapper;
 import com.carbigdata.backend.domain.ocorrencia.OcorrenciaRepository;
+import com.carbigdata.backend.entity.FotoOcorrencia;
+import com.carbigdata.backend.entity.Ocorrencia;
+import com.carbigdata.backend.mapper.OcorrenciaMapper;
 import com.carbigdata.backend.storage.ObjectStoragePort;
 import java.io.IOException;
 import java.time.Instant;

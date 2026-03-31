@@ -1,5 +1,7 @@
-package com.carbigdata.backend.domain.cliente;
+package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.domain.cliente.ClienteDto;
+import com.carbigdata.backend.domain.cliente.ClienteService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
