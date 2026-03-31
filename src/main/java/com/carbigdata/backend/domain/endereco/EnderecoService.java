@@ -1,6 +1,8 @@
 package com.carbigdata.backend.domain.endereco;
 
 import com.carbigdata.backend.domain.common.NotFoundException;
+import com.carbigdata.backend.entity.Endereco;
+import com.carbigdata.backend.mapper.EnderecoMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

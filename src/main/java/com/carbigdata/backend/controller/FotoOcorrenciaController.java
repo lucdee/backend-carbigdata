@@ -1,5 +1,7 @@
-package com.carbigdata.backend.domain.foto;
+package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.domain.foto.FotoOcorrenciaDto;
+import com.carbigdata.backend.domain.foto.FotoOcorrenciaService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;

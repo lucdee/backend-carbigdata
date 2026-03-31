@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.entity;
 
 public enum StatusOcorrencia {
     ATIVA,

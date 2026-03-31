@@ -1,5 +1,7 @@
-package com.carbigdata.backend.domain.cliente;
+package com.carbigdata.backend.mapper;
 
+import com.carbigdata.backend.domain.cliente.ClienteDto;
+import com.carbigdata.backend.entity.Cliente;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

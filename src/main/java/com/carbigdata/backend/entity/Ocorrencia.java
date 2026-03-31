@@ -1,7 +1,5 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.entity;
 
-import com.carbigdata.backend.domain.cliente.Cliente;
-import com.carbigdata.backend.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

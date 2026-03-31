@@ -1,10 +1,12 @@
 package com.carbigdata.backend.domain.ocorrencia;
 
-import com.carbigdata.backend.domain.cliente.Cliente;
+import com.carbigdata.backend.entity.Cliente;
 import com.carbigdata.backend.domain.cliente.ClienteRepository;
 import com.carbigdata.backend.domain.common.NotFoundException;
-import com.carbigdata.backend.domain.endereco.Endereco;
+import com.carbigdata.backend.entity.Endereco;
 import com.carbigdata.backend.domain.endereco.EnderecoRepository;
+import com.carbigdata.backend.entity.Ocorrencia;
+import com.carbigdata.backend.mapper.OcorrenciaMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

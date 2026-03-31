@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.cliente;
+package com.carbigdata.backend.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;

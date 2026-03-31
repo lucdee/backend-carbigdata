@@ -1,6 +1,6 @@
 package com.carbigdata.backend.config;
 
-import com.carbigdata.backend.domain.user.AppUser;
+import com.carbigdata.backend.entity.AppUser;
 import com.carbigdata.backend.domain.user.AppUserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

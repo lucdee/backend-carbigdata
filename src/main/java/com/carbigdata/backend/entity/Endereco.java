@@ -1,4 +1,4 @@
-package com.carbigdata.backend.domain.endereco;
+package com.carbigdata.backend.entity;
 
 import jakarta.persistence.*;
 

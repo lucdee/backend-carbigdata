@@ -1,5 +1,7 @@
-package com.carbigdata.backend.domain.endereco;
+package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.domain.endereco.EnderecoDto;
+import com.carbigdata.backend.domain.endereco.EnderecoService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

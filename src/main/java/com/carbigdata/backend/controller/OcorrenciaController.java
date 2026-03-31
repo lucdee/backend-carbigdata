@@ -1,5 +1,8 @@
-package com.carbigdata.backend.domain.ocorrencia;
+package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.domain.ocorrencia.OcorrenciaDto;
+import com.carbigdata.backend.domain.ocorrencia.OcorrenciaRequest;
+import com.carbigdata.backend.domain.ocorrencia.OcorrenciaService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

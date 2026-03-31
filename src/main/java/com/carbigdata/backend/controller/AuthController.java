@@ -1,5 +1,6 @@
-package com.carbigdata.backend.auth;
+package com.carbigdata.backend.controller;
 
+import com.carbigdata.backend.auth.JwtService;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
