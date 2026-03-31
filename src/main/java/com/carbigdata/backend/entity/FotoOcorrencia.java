@@ -2,7 +2,11 @@ package com.carbigdata.backend.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "foto_ocorrencia")
 public class FotoOcorrencia {
@@ -26,16 +30,7 @@ public class FotoOcorrencia {
     private String hash;
 
     @PrePersist
-    void prePersist() { this.dataCriacao = LocalDateTime.now(); }
-
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public Ocorrencia getOcorrencia() { return ocorrencia; }
-    public void setOcorrencia(Ocorrencia ocorrencia) { this.ocorrencia = ocorrencia; }
-    public LocalDateTime getDataCriacao() { return dataCriacao; }
-    public void setDataCriacao(LocalDateTime dataCriacao) { this.dataCriacao = dataCriacao; }
-    public String getPathBucket() { return pathBucket; }
-    public void setPathBucket(String pathBucket) { this.pathBucket = pathBucket; }
-    public String getHash() { return hash; }
-    public void setHash(String hash) { this.hash = hash; }
+    void prePersist() {
+        this.dataCriacao = LocalDateTime.now();
+    }
 }
