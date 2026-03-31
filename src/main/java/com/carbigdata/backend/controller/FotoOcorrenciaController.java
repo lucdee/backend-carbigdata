@@ -22,8 +22,8 @@ public class FotoOcorrenciaController {
         return service.listByOcorrencia(ocorrenciaId, pageable);
     }
 
-    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+   /* @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public FotoOcorrenciaResponseDto upload(@PathVariable Long ocorrenciaId, @RequestPart("file") MultipartFile file) {
         return service.upload(ocorrenciaId, file);
-    }
+    }*/
 }

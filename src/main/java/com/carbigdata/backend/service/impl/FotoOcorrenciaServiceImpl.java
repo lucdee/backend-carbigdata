@@ -8,7 +8,6 @@ import com.carbigdata.backend.mapper.OcorrenciaMapper;
 import com.carbigdata.backend.repository.FotoOcorrenciaRepository;
 import com.carbigdata.backend.repository.OcorrenciaRepository;
 import com.carbigdata.backend.service.FotoOcorrenciaService;
-import com.carbigdata.backend.storage.ObjectStoragePort;
 import java.io.IOException;
 import java.time.Instant;
 import org.springframework.data.domain.Page;
@@ -21,13 +20,13 @@ public class FotoOcorrenciaServiceImpl implements FotoOcorrenciaService {
     private final FotoOcorrenciaRepository repository;
     private final OcorrenciaRepository ocorrenciaRepository;
     private final OcorrenciaMapper mapper;
-    private final ObjectStoragePort storage;
+/*    private final ObjectStoragePort storage;*/
 
-    public FotoOcorrenciaServiceImpl(FotoOcorrenciaRepository repository, OcorrenciaRepository ocorrenciaRepository, OcorrenciaMapper mapper, ObjectStoragePort storage) {
+    public FotoOcorrenciaServiceImpl(FotoOcorrenciaRepository repository, OcorrenciaRepository ocorrenciaRepository, OcorrenciaMapper mapper) {
         this.repository = repository;
         this.ocorrenciaRepository = ocorrenciaRepository;
         this.mapper = mapper;
-        this.storage = storage;
+   /*     this.storage = storage;*/
     }
 
     @Override
@@ -35,7 +34,7 @@ public class FotoOcorrenciaServiceImpl implements FotoOcorrenciaService {
         return repository.findByOcorrenciaId(ocorrenciaId, pageable).map(mapper::toDto);
     }
 
-    @Override
+   /* @Override
     public FotoOcorrenciaResponseDto upload(Long ocorrenciaId, MultipartFile file) {
         Ocorrencia ocorrencia = ocorrenciaRepository.findById(ocorrenciaId)
                 .orElseThrow(() -> new NotFoundException("Ocorrência não encontrada"));
@@ -52,5 +51,5 @@ public class FotoOcorrenciaServiceImpl implements FotoOcorrenciaService {
         } catch (IOException e) {
             throw new IllegalStateException("Falha ao ler arquivo recebido", e);
         }
-    }
+    }*/
 }
