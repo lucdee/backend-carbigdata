@@ -2,7 +2,11 @@ package com.carbigdata.backend.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "ocorrencia")
 public class Ocorrencia {
@@ -26,15 +30,4 @@ public class Ocorrencia {
     @Enumerated(EnumType.STRING)
     @Column(name = "sta_ocorrencia", nullable = false)
     private StatusOcorrencia status;
-
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public Cliente getCliente() { return cliente; }
-    public void setCliente(Cliente cliente) { this.cliente = cliente; }
-    public Endereco getEndereco() { return endereco; }
-    public void setEndereco(Endereco endereco) { this.endereco = endereco; }
-    public LocalDateTime getDataOcorrencia() { return dataOcorrencia; }
-    public void setDataOcorrencia(LocalDateTime dataOcorrencia) { this.dataOcorrencia = dataOcorrencia; }
-    public StatusOcorrencia getStatus() { return status; }
-    public void setStatus(StatusOcorrencia status) { this.status = status; }
 }
