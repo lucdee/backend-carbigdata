@@ -10,5 +10,5 @@ public interface ClienteService {
 
     ClienteResponseDto find(Long id);
 
-    ClienteResponseDto create(ClienteRequestDto dto);
+    ClienteResponseDto create(ClienteRequestDto request);
 }

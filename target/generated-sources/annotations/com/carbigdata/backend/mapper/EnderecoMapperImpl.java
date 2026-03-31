@@ -1,5 +1,6 @@
 package com.carbigdata.backend.mapper;
 
+import com.carbigdata.backend.dto.request.EnderecoRequestDto;
 import com.carbigdata.backend.dto.response.EnderecoResponseDto;
 import com.carbigdata.backend.entity.Endereco;
 import javax.annotation.processing.Generated;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-03-31T14:07:10-0300",
+    date = "2026-03-31T15:07:18-0300",
     comments = "version: 1.6.3, compiler: javac, environment: Java 19.0.1 (Oracle Corporation)"
 )
 @Component
@@ -39,19 +40,18 @@ public class EnderecoMapperImpl implements EnderecoMapper {
     }
 
     @Override
-    public Endereco toEntity(EnderecoResponseDto dto) {
-        if ( dto == null ) {
+    public Endereco toEntity(EnderecoRequestDto request) {
+        if ( request == null ) {
             return null;
         }
 
         Endereco endereco = new Endereco();
 
-        endereco.setId( dto.id() );
-        endereco.setLogradouro( dto.logradouro() );
-        endereco.setBairro( dto.bairro() );
-        endereco.setCep( dto.cep() );
-        endereco.setCidade( dto.cidade() );
-        endereco.setEstado( dto.estado() );
+        endereco.setLogradouro( request.logradouro() );
+        endereco.setBairro( request.bairro() );
+        endereco.setCep( request.cep() );
+        endereco.setCidade( request.cidade() );
+        endereco.setEstado( request.estado() );
 
         return endereco;
     }

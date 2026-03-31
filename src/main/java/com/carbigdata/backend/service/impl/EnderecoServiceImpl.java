@@ -1,5 +1,6 @@
 package com.carbigdata.backend.service.impl;
 
+import com.carbigdata.backend.dto.request.EnderecoRequestDto;
 import com.carbigdata.backend.dto.response.EnderecoResponseDto;
 import com.carbigdata.backend.entity.Endereco;
 import com.carbigdata.backend.exception.NotFoundException;
@@ -31,8 +32,8 @@ public class EnderecoServiceImpl implements EnderecoService {
     }
 
     @Override
-    public EnderecoResponseDto create(EnderecoResponseDto dto) {
-        Endereco endereco = mapper.toEntity(dto);
+    public EnderecoResponseDto create(EnderecoRequestDto request) {
+        Endereco endereco = mapper.toEntity(request);
         endereco.setId(null);
         return mapper.toDto(repository.save(endereco));
     }
