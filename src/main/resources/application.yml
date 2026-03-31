@@ -9,6 +9,8 @@ spring:
     open-in-view: false
   flyway:
     enabled: true
+    baseline-on-migrate: ${FLYWAY_BASELINE_ON_MIGRATE:true}
+    baseline-version: ${FLYWAY_BASELINE_VERSION:0}
 
 app:
   jwt:
